@@ -43,8 +43,8 @@ function renderSection1(props) {
                 <div className={css(section1Styles.flexRow1__spacer)} />
 
                 <div className={css(section1Styles.flexCol1)}>
-                  <h1 className={css(section1Styles.hero_title1)}>Best Breakfasr</h1>
-
+                  <h1 className={css(section1Styles.hero_title1)}>Contact Us For Best BreakFirst</h1>
+                              
                   <div
                     className={css(section1Styles.content_box)}
                     style={{ '--src': `url(${require('assets/contentbox.png')})` }}>
@@ -58,7 +58,7 @@ function renderSection1(props) {
          
         </div>
 
-        <h2 className={css(section1Styles.medium_title1)}>
+        <h2 className={css(section1Styles.medium_title1b)}>
           Vous méritez un bon plat opour bien démarrer votre journée,dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna.
         </h2>
@@ -626,6 +626,7 @@ const section1Styles = StyleSheet.create({
   
   },
   image3: {
+
     width: '100%',
     height: 'min-content',
     aspectRatio: '1.28',
@@ -633,7 +634,8 @@ const section1Styles = StyleSheet.create({
     objectFit: 'cover',
     objectPosition: 'center center',
     position: 'relative',
-    top:'95px',
+    top:72,
+    marginLeft: 30,
     minHeight: 0,
     '@media (min-width: 1980px) and (max-width: 991px)': { 
       width: '100%',
@@ -643,7 +645,7 @@ const section1Styles = StyleSheet.create({
       objectFit: 'cover',
       objectPosition: 'center center',
       position: 'relative',
-      top:'95px',
+      top:'70px',
       minHeight: 0,
   
     },
@@ -676,13 +678,14 @@ const section1Styles = StyleSheet.create({
   
   },
   hero_title1: {
-    font: '67px/1.2 "Inter", Helvetica, Arial, serif',
+    font: '56px/1.2 "Inter", Helvetica, Arial, serif',
     color: 'rgb(254,144,0)',
     letterSpacing: '0px',
     position: 'relative',
     minHeight: 0,
+    width:'100%',
     '@media (min-width: 1980px) and (max-width: 991px)': {
-      font: '67px/1.2 "Inter", Helvetica, Arial, serif',
+      font: '56px/1.2 "Inter", Helvetica, Arial, serif',
       color: 'rgb(254,144,0)',
       letterSpacing: '0px',
       position: 'relative',
@@ -717,12 +720,13 @@ const section1Styles = StyleSheet.create({
     flexDirection: 'column',
     background: 'var(--src) center center / cover no-repeat',
     width: '67.48%',
-    borderRadius:'10px',
+    borderRadius:'5px',
     alignItems:'center',
     justifyContent: 'center',
     position: 'relative',
     minHeight: '68px',
-    margin: '321px 56.52% 0px 0%',
+    top:-102,
+    margin: '220px 56.52% 0px 0%',
     '@media (min-width: 1980px) and (max-width: 991px)': { 
       display: 'flex',
       flexDirection: 'column',
@@ -733,7 +737,7 @@ const section1Styles = StyleSheet.create({
       justifyContent: 'center',
       position: 'relative',
       minHeight: '68px',
-      margin: '321px 56.52% 0px 0%',
+      margin: '300px 56.52% 0px 0%',
   
     },
   
@@ -783,6 +787,42 @@ const section1Styles = StyleSheet.create({
     minHeight: 0,
     margin: '19px 30px 21px 37px',
      
+  },
+  medium_title1b:{
+    marginTop:'10px',
+    marginLeft:'-0.5%',
+  font: '400 25px/1.2 "Inter", Helvetica, Arial, serif',
+  color: 'rgb(255,255,255)',
+  letterSpacing: '0px',
+  height: 30,
+  width:'40%',
+  boxSizing: 'border-box',
+  position: 'absolute',
+  top: 448,
+  left: 700,
+  right: -672,
+  '@media (min-width >= 1024px)': {
+    marginTop:'20px',
+    marginLeft:'-15%',
+    font: '400 25px/1.2 "Inter", Helvetica, Arial, serif',
+    color: 'rgb(255,255,255)',
+    letterSpacing: '0px',
+    height: 30,
+    position: 'absolute',
+    top: 478,
+    left: 489,
+    right: -672
+   },
+
+  '@media (max-width: 1199px)': {
+    fontSize: '20px',
+    textAlign: 'left'
+  },
+  '@media (max-width: 767px)': {
+    fontSize: '16px'
+  },
+ 
+
   },
   medium_title1: {
       marginTop:'20px',
