@@ -1,0 +1,6 @@
+.imagebox {
+    background-image: url("../../assets/headerbgk.png");
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgb(52, 27, 85);
+    }
