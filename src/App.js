@@ -21,12 +21,16 @@ class App extends Component {
 
   render() {
     return (
+
       <Router hashType="noslash" basename={process.env.BASE_PATH}>
         <Switch>
           <Route exact path="/">
-            <div>
-             Redirection to Foody Page {'=>'}<br />
-              <Link to="/start">LandingPage</Link>
+            <div style={{ background:'#c2c2c2',color:'#000000',fontSize:'24px',width:'550px',height:'190px',marginTop:'50px',marginLeft:'50px' }}>
+            <br />
+           &nbsp; Please check this link to get redirected to Main Page {' :'}
+           <Link to="/start"> &nbsp;LandingPage</Link>
+     
+        
             </div>
           </Route>
 
