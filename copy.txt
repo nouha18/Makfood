@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { slide as Menu } from 'react-burger-menu';
 import cn from 'classnames';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,7 +13,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';   
-import './fdstyles.css';
+
 function getWindowSize() {
   const {innerWidth, innerHeight} = window;
   return {innerWidth, innerHeight};
@@ -45,7 +44,7 @@ const Blog =()=>{
 
   return (
     <>
-    {window.innerWidth <'780' ?(
+    {display?(
        <Carousel  
          className={css(section4Styles.carousel)} >
        <Carousel.Item>
@@ -227,23 +226,7 @@ function renderSection1(props) {
 
             <div className={css(section1Styles.flexCol)}
               >
-                
-
-              {window.innerWidth >'780'?null:(  <Menu className={css(section1Styles.menubrg)}>
-      <a className="menu-item" href="/start">
-        About
-      </a>
-      <a className="menu-item" href="/contact">
-       Contact
-      </a>
-      <a className="menu-item" href="/menu">
-        MenuLight
-      </a>
-      <a className="menu-item" href="/Delivery">
-       Delivery
-      </a>
-    </Menu> )}  
-              <div className={css(section1Styles.flexRowH)}>
+              <div className={css(section1Styles.flexRow)}>
                 <h5 className={css(section1Styles.highlights1)}>          ABOUT          MENUS          OFFERS</h5>
                 <div className={css(section1Styles.flexRow__spacer)} />
                 <div className={css(section1Styles.flexRow__item)}>
@@ -268,7 +251,7 @@ function renderSection1(props) {
                 </div>
                 <div className={css(section1Styles.flexRow1__spacer)} />
 
-                <div className={css(section1Styles.flexCol1b)}>
+                <div className={css(section1Styles.flexCol1)}>
                   <h1 className={css(section1Styles.hero_title1)}>Contact Us For Best BreakFirst</h1>
                   <h2 className={css(section1Styles.medium_title1b)}>
           Vous méritez un bon plat opour bien démarrer votre journée,dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -301,11 +284,11 @@ function renderSection2(props) {
       />
 
       <div className={css(section2Styles.group)}>
-      <h1 className={css(section2Styles.hero_titleus)}>About Us</h1>
+      <h1 className={css(section2Styles.hero_title)}>About Us</h1>
  
         <h1 className={css(section2Styles.title2b)}>
 
-          Description:  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
           facilisis.
         </h1>
@@ -324,12 +307,12 @@ function renderSection3(props) {
         alt="yellow decorator1"
       />
       <img
-        className={css(section3Styles.decorator0)}
+        className={css(section3Styles.decorator)}
         src={require('assets/menuside.png')}
-        alt="decorator0"
+        alt="decorator"
       />
       <div className={css(section3Styles.group3)}>
-      <h1 className={css(section3Styles.hero_title3f)}>Our Food Quality</h1>
+      <h1 className={css(section3Styles.hero_title)}>Our Food Quality</h1>
        <h1 className={css(section3Styles.title3f)}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
@@ -462,18 +445,16 @@ function renderSection5(props) {
                       />
                            <div className={css(section5Styles.flexCol3_box)} >
                     <h1 className={css(section5Styles.enjoyttl)}>Enjoy Best Meal</h1>
-                    <br/> 
+ <br/>
 <h5 className={css(section5Styles.highlightsj)}>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Quis ipsum suspendisse.
 </h5>
 </div>
-<br/><br/><br/>
                     </div>
 
                     <div className={css(section5Styles.flexCol4)}>
                       <div className={css(section5Styles.flexCol4__item)}>
-                      <br/> <br/> <br/>
                         <img
                           className={css(section5Styles.image)}
                           src={require('assets/logofooter.png')}
@@ -481,51 +462,7 @@ labore et dolore magna aliqua. Quis ipsum suspendisse.
                         />
                       </div>
 
-                      
-                  {window.innerWidth<'780'?( <div className={css(section5Styles.flexCol5b)}>
-                        <h3 className={css(section5Styles.subtitle)}>Home About Us Services Foods Contact Location</h3>
-
-                        <div className={css(section5Styles.flexRow2)}>
-                          <div className={css(section5Styles.flexRow2__item)}>
-                            <img
-                              className={css(section5Styles.icon)}
-                              src={require('assets/fb.png')}
-                              alt="alt text"
-                            />
-                          </div>
-                          <div className={css(section5Styles.flexRow2__spacer)} />
-                          <div className={css(section5Styles.flexRow2__item)}>
-                            <img
-                              className={css(section5Styles.icon)}
-                              src={require('assets/twitter.png')}
-                              alt="alt text"
-                            />
-                          </div>
-                          <div className={css(section5Styles.flexRow2__spacer)} />
-                          <div className={css(section5Styles.flexRow2__item)}>
-                            <img
-                              className={css(section5Styles.icon)}
-                              src={require('assets/instavect.png')}
-                              alt="alt text"
-                            />
-                          </div>
-                          <div className={css(section5Styles.flexRow2__spacer)} />
-                          <div className={css(section5Styles.flexRow2__item)}>
-                            <img
-                              className={css(section5Styles.icon)}
-                              src={require('assets/pint.png')}
-                              alt="alt text"
-                            />
-                              <div className={css(section5Styles.flexRow2__spacer)} />
-                        
-                                      
-                          </div>
-                        </div>
-
-
-
-
-                      </div>):(<div className={css(section5Styles.flexCol5)}>
+                      <div className={css(section5Styles.flexCol5)}>
                         <h3 className={css(section5Styles.subtitle)}>Home About Us Services Foods COntact Location</h3>
 
                         <div className={css(section5Styles.flexRow2)}>
@@ -561,7 +498,7 @@ labore et dolore magna aliqua. Quis ipsum suspendisse.
                             />
                           </div>
                         </div>
-                      </div>)}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -638,11 +575,11 @@ const section1Styles = StyleSheet.create({
   
     flexGrow: 1,
     minHeight: 0,
-    '@media  (max-width: 780px)': { 
+    '@media (min-width: 1980px) and (max-width: 991px)': { 
       display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-     top:-102,
+
     flexGrow: 1,
     minHeight: 0,},
    
@@ -705,30 +642,7 @@ const section1Styles = StyleSheet.create({
     }
   
   },
-  
-menubrg: {
-
-  display:'flex',
-  position:'relative',
-  backgroundColor:'transparent',
-  '@media (max-width:780px)': {
-  display:'flex',
-  position:'relative',
- 
-  color:'rgba(255,255,255,0.8)',
-  flexDirection: 'column',
-  justifyContent:'center',
-  alignItems: 'center',
-  },
-  '@media (min-width:800px)': {
-    display:'none',
-   background:'transparent'
-    }
-
-},
-
-
-  flexRowH: {
+  flexRow: {
     '@media (min-width: 1980px) and (max-width: 991px)': {
       display: 'flex',
   
@@ -741,12 +655,14 @@ menubrg: {
     '@media (max-width: 991px)': {
       margin: '0px 0px 0px 24px'
     },
-    '@media (max-width: 780px)': {
-      display: 'none',
-  
-
+    '@media (max-width: 767px)': {
+      margin: '0px 0px 0px 20px'
     },
-  
+    '@media (max-width: 575px)': {},
+    '@media (max-width: 479px)': {
+      margin: '0px 0px 0px 16px'
+    },
+    '@media (max-width: 383px)': {},
     display: 'flex',
   
     position: 'relative',
@@ -778,10 +694,6 @@ menubrg: {
   
     },
   
-    '@media (max-width: 780px)': { 
-     display:'none'
-  
-    },
       },
   flexRow__spacer: {
     flex: '0 1 277px',
@@ -852,11 +764,9 @@ menubrg: {
     minHeight: 0,
     margin: '31px 0px 30px'
  },
- '@media (max-width: 780px)': {
- display:'none'
-},
- },
-
+  
+ 
+  },
   flexRow1: {
     display: 'flex',
     position: 'relative',
@@ -931,28 +841,6 @@ menubrg: {
     flex: '0 1 59px',
     '@media (min-width: 1980px) and (max-width: 991px)': {
       flex: '0 1 59px',
-  
-     },
-  
-  },
-  flexCol1b: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    flex: '0 1 460px',
-    minHeight: 0,
-    margin: '50px 0px 66px',
-    '@media (max-width: 780px)': {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      position: 'relative',
-      flex: '0 1 460px',
-      minHeight: 0,
-      left:-65,
-      top:75,
-
   
      },
   
@@ -1033,20 +921,6 @@ menubrg: {
       margin: '300px 56.52% 0px 0%',
   
     },
-    '@media (max-width: 780px)': { 
-      display: 'flex',
-      flexDirection: 'column',
-      background: 'var(--src) center center / cover no-repeat',
-      width: '100%',
-      borderRadius:'10px',
-      alignItems:'center',
-      justifyContent: 'center',
-      position: 'relative',
-      minHeight: '68px',
-      margin: '70px 10.52% 0px 0%',
-      left:-25,
-  
-    },
   
   },
  
@@ -1097,6 +971,7 @@ menubrg: {
 
   medium_title1b:{
   marginTop:'10px',
+  marginLeft:'-0.5%',
   font: '400 25px/1.2 "Inter", Helvetica, Arial, serif',
   color: 'rgb(255,255,255)',
   letterSpacing: '0px',
@@ -1121,8 +996,12 @@ menubrg: {
     right: -672
    },
 
-  '@media (max-width: 780px)': {
-    display:'none'
+  '@media (max-width: 1199px)': {
+    fontSize: '20px',
+    textAlign: 'left'
+  },
+  '@media (max-width: 767px)': {
+    fontSize: '16px'
   },
  
 
@@ -1230,15 +1109,19 @@ const section2Styles = StyleSheet.create({
       top:-224,
      },
   
-    '@media (max-width: 780px)': {
+    '@media (max-width: 1199px)': {
       fontSize: '28px',
-      textAlign: 'left',
-      width:'60.1%',
-      padding:'5%',
-      top:135,
-      left:'5%'
+      textAlign: 'left'
     },
- 
+    '@media (max-width: 991px)': {
+      fontSize: '24px'
+    },
+    '@media (max-width: 767px)': {
+      fontSize: '20px'
+    },
+    '@media (max-width: 383px)': {
+      fontSize: '16px'
+    },
    
   },
   image2: {
@@ -1352,47 +1235,6 @@ const section2Styles = StyleSheet.create({
       fontSize: '24px'
     },
     
-  },
-  hero_titleus: {
-    font: '400 50.01599884033203px/1.21 "Inter", Helvetica, Arial, serif',
-    position: 'absolute',
-    top: -168,
-    bottom: 58,
-    minHeight: '120px',
-    margin:'20px',
-    left:0,
-    
-    color: 'rgb(255,255,255)',
-    letterSpacing: '0px',
-    width: '460px',
-    '@media  (min-width: 991px)': {
-      position: 'absolute',
-    top: -168,
-    bottom: 58,
-    minHeight: '120px',
-    margin:'20px',
-    left:0,
-    color: 'rgb(255,255,255)',
-    letterSpacing: '0px',
-    width: '460px',
-     },
-  
-    '@media (max-width: 780px)': {
-      fontSize: '36px',
-      position: 'absolute',
-      top: 268,
-      bottom: 58,
-      minHeight: '120px',
-      margin:'20px',
-      left:0,
-      color: 'rgb(255,255,255)',
-      letterSpacing: '0px',
-      width: '80%',
-      zIndex:999,
-    },
-    
-   
-    
   }
 });
 
@@ -1446,7 +1288,7 @@ const section3Styles = StyleSheet.create({
     },
   
   },
-  decorator0: {
+  decorator: {
     width: 785,
     height: 1009,
     aspectRatio: '1',
@@ -1467,16 +1309,15 @@ const section3Styles = StyleSheet.create({
       bottom: -468,
       right: -321,
      },
-     '@media  (max-width: 780px)': {
-      width: 201,
+     '@media  (max-width: 480px)': {
+      width: 200,
       height: 301,
       aspectRatio: '1',
       verticalAlign: 'top',
       objectPosition: 'center center',
       position: 'absolute',
       minHeight: 0,
-      top:30,
-      bottom:120,
+      bottom: 280,
       right: -20,
      },
   
@@ -1491,22 +1332,10 @@ const section3Styles = StyleSheet.create({
     top:798,
     left:-25,
     margin: '10px 8.47% 44px 13.89%',
-    '@media(max-width: 780px)': {
-      display: 'flex',
-      flexDirection: 'column',
-      width: '80.64%',
-      position: 'relative',
-      flexGrow: 1,
-      minHeight: 0,
-      top:-80,
-      left:18,
-      margin: '0 8.47% 44px 3.89%',
-     },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   title3f: {
-    
-    position: 'absolute',
     fontSize: '30px',
      color: 'rgb(255,255,255)',
     letterSpacing: '0px',
@@ -1529,21 +1358,20 @@ const section3Styles = StyleSheet.create({
       marginTop:'10%',
     },
   
-  
-    '@media (max-width: 780px)': {
-      fontSize: '18px',
-      position: 'absolute',
-      color: 'rgb(255,255,255)',
-      letterSpacing: '0px',
-      height: 58,
-      maxWidth:'95.50%',
-      top:100,
-      left:'0.5%',
-      boxSizing:'border-box',
-      padding:10,
-      marginTop:'10%',
+    '@media (max-width: 1199px)': {
+      fontSize: '28px',
+      textAlign: 'left'
     },
-   
+    '@media (max-width: 991px)': {
+      fontSize: '24px'
+    },
+    '@media (max-width: 767px)': {
+      fontSize: '20px'
+    },
+    '@media (max-width: 383px)': {
+      fontSize: '16px'
+    },
+    position: 'absolute',
 
   },
   title: {
@@ -1571,7 +1399,7 @@ const section3Styles = StyleSheet.create({
     left: 1,
     right: -3189
   },
-  hero_title3f: {
+  hero_title: {
       top:235,
     font: '400 50.01599884033203px/1.21 "Inter", Helvetica, Arial, serif',
     color: 'rgb(255,255,255)',
@@ -1586,16 +1414,13 @@ const section3Styles = StyleSheet.create({
       fontSize: '36px'
     },
     '@media (max-width: 767px)': {
-      fontSize: '32px',
-      top:675,
+      fontSize: '32px'
     },
     '@media (max-width: 575px)': {
-      fontSize: '28px',
-      top:65,
+      fontSize: '28px'
     },
     '@media (max-width: 383px)': {
-      fontSize: '24px',
-      top:65,
+      fontSize: '24px'
     },
     position: 'relative',
     flexGrow: 1,
@@ -2241,15 +2066,8 @@ const section5Styles = StyleSheet.create({
   rect1: {
     backgroundColor: 'rgb(254,144,0)',
     position: 'relative',
-    minHeight: 704,
-    '@media (max-width: 780px)': { 
-      display:'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'rgb(254,144,0)',
-      position: 'relative',
-      minHeight: 704,
-    },
+    minHeight: 504,
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   rect55: {
@@ -2489,14 +2307,7 @@ const section5Styles = StyleSheet.create({
     position: 'relative',
     minHeight: 0,
     margin: '161px 30.73% 0px 0%',
-    '@media (max-width: 780px)': { 
-      display: 'flex',
-    flexDirection: 'column',
-    width: '80.27%',
-    position: 'relative',
-    minHeight: 0,
-    margin: '100px 15.73% 0px 0%',
-    },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   flexCol3__item: {
@@ -2504,10 +2315,7 @@ const section5Styles = StyleSheet.create({
     flexDirection: 'row',
     position: 'relative',
     left:'10px',
-    ' (max-width: 780px)': { 
-      position: 'relative',
-    left:-145,
-    },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   flexCol3_box:{
@@ -2517,14 +2325,7 @@ const section5Styles = StyleSheet.create({
     margin:'10px',
     left:'10px',
     top:-390,
-    '@media (max-width: 780px)': {
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-      margin:'10px',
-      left:-60,
-      top:-214,
-     },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   highlightsj:{
@@ -2536,12 +2337,11 @@ const section5Styles = StyleSheet.create({
    left:-50,
    marginLeft:-139,
     top:65,
- 
-    '@media (max-width: 780px)': {
-      fontSize: '14px',
-      width:'560px',
-      left:-280,
-      top:85,
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
+  
+    '@media (max-width: 991px)': {
+      fontSize: '12px',
+     
     }
   },
   enjoyttl:{
@@ -2558,15 +2358,21 @@ const section5Styles = StyleSheet.create({
         fontSize: '56px',
         textAlign: 'left'
       },
-      '@media (max-width: 780px)': {
-        fontSize: '38px',
-        position:'relative',
-        top:40,
-        left:-168,
-        width:'90%',
+      '@media (max-width: 991px)': {
+        fontSize: '48px'
   
       },
- 
+      '@media (max-width: 767px)': {
+        fontSize: '40px',
+      },
+      '@media (max-width: 575px)': {
+        fontSize: '36px',
+    
+      },
+      '@media (max-width: 479px)': {
+        fontSize: '32px',
+      
+      },
       
       
   },
@@ -2597,18 +2403,7 @@ const section5Styles = StyleSheet.create({
     top:-456,
     left:-30,
     margin: '0px 25.63% 0px 0%',
-    ' @media(max-width: 780px)': {
-      height: 'min-content',
-      aspectRatio: '0.96',
-      verticalAlign: 'top',
-      objectFit: 'cover',
-      objectPosition: 'center center',
-      position: 'relative',
-      minHeight: 0,
-      top:-206,
-      left:86,
-      margin: '0px 10.63% 0px 0%',
-     },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   flexCol4: {
@@ -2619,26 +2414,14 @@ const section5Styles = StyleSheet.create({
     minHeight: 0,
     margin: '-28px 15% 0px 10.02%',
     top:-289,
-    '@media (max-width: 780px)': { 
-      display: 'flex',
-      alignItems:'center',
-      justifyContent: 'center',
-    flexDirection: 'column',
-    width: '90.98%',
-    position: 'relative',
-    minHeight: 0,
-    margin: '-10px 8% 0px 10.02%',
-    top:-280,
-    },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   flexCol4__item: {
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    ' (max-width: 780px)': {
-
-     },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   
   },
@@ -2653,30 +2436,7 @@ const section5Styles = StyleSheet.create({
     minHeight: 0,
     left:'15%',
     margin: '0px 0% 0px 36.82%',
-    ' (max-width: 780px)': { },
-    },
-
-  flexCol5b: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '90%',
-    position: 'relative',
-    minHeight: 0,
-    left:'15%',
-    margin: '40px 15.12% 0px 5%',
-    '(max-width: 780px)': { 
-      display: 'flex',  
-      justifyContent:'center',
-      flexDirection: 'column',
-      width: '90%',
-      position: 'relative',
-      minHeight: 0,
-      left:-195,
-      top:40,
-      right:40,
-      bottom:-23,
-      margin: '10px 5.12% 2%px 5%',
-    },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   flexCol5: {
@@ -2687,15 +2447,7 @@ const section5Styles = StyleSheet.create({
     minHeight: 0,
     left:'15%',
     margin: '40px 15.12% 0px 5%',
-    '(max-width: 780px)': { 
-      display: 'flex',
-      flexDirection: 'column',
-      width: '90%',
-      position: 'relative',
-      minHeight: 0,
-      left:'3%',
-      margin: '40px 15.12% 0px 5%',
-    },
+    '@media (min-width: 1980px) and (max-width: 991px)': { },
   
   },
   subtitle: {
@@ -2721,22 +2473,6 @@ const section5Styles = StyleSheet.create({
     minHeight: 0,
     margin: '59px 0% 0px 52.21%',
     '@media (min-width: 1980px) and (max-width: 991px)': { },
-  
-  },
-  flexRow2f: {
-    display: 'flex',
-    width: '47.79%',
-    position: 'relative',
-    minHeight: 0,
-    margin: '59px 0% 0px 52.21%',
-    ' (max-width: 780px)': {
-      width: '56.79%',
-      position: 'relative',
-      minHeight: 0,
-      left:-45,
-
-      margin: '59px 0% 0px 52.21%',
-     },
   
   },
   flexRow2__item: {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import L1_SmartGroup from 'components/L1_SmartGroup';
 import AOS from 'aos';
 import { isMobile } from 'react-device-detect';
 
